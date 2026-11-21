@@ -31,7 +31,8 @@ export interface ParsedSvg {
 
 /** Real XML parsing via sax (strict mode, predefined entities only). No regex parsing of markup. */
 export function parseSvg(text: string): ParsedSvg {
-  const parser = sax.parser(true, { trim: false, normalize: false, lowercase: false, xmlns: false, position: false, strictEntities: true });
+  // strictEntities is a valid sax runtime option missing from the bundled SAXOptions type
+  const parser = sax.parser(true, { trim: false, normalize: false, lowercase: false, xmlns: false, position: false, strictEntities: true } as sax.SAXOptions);
   const stack: ElementNode[] = [];
   let root: ElementNode | null = null;
   const stats: ParseStats = { comments: 0, processingInstructions: 0, doctype: false };
@@ -51,7 +52,7 @@ export function parseSvg(text: string): ParsedSvg {
   parser.onprocessinginstruction = (): void => {
     stats.processingInstructions++;
   };
-  parser.onopentag = (tag: { name: string; attributes: Record<string, string> }): void => {
+  parser.onopentag = (tag: sax.Tag | sax.QualifiedTag): void => {
     if (root && stack.length === 0) {
       failure = failure ?? new Error('Multiple root elements');
       return;
@@ -59,7 +60,7 @@ export function parseSvg(text: string): ParsedSvg {
     const node: ElementNode = {
       type: 'element',
       name: tag.name,
-      attrs: Object.entries(tag.attributes),
+      attrs: Object.entries(tag.attributes as Record<string, string>),
       children: [],
     };
     const parent = stack[stack.length - 1];
