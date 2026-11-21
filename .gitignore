@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+*.tmp
+.env
+.env.*
+.DS_Store
+# local cache and run reports
+cache/*
+!cache/README.md
+reports/runs/*
+!reports/runs/.gitkeep

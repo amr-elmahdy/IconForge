@@ -1,0 +1,15 @@
+{
+  "inputFile": "input/icons.txt",
+  "outputDir": "output",
+  "reportsDir": "reports/runs",
+  "cacheDir": "cache",
+  "source": {
+    "registryUrl": "https://thesvg.org/api/registry.json",
+    "iconBaseUrl": "https://thesvg.org/icons",
+    "fallbackIconBaseUrl": "https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons",
+    "repository": "glincker/thesvg",
+    "commitApiUrl": "https://api.github.com/repos/glincker/thesvg/commits/main"
+  },
+  "network": { "concurrency": 4, "timeoutMs": 20000, "retries": 3, "retryBaseDelayMs": 500 },
+  "processing": { "optimize": true, "maxFileBytes": 2097152 }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- editor comment -->
+<svg viewBox="0 0 24 24">
+  <defs>
+    <linearGradient id="g"><stop offset="0" stop-color="#FFF"/><stop offset="1" stop-color="#ff0000"/></linearGradient>
+  </defs>
+  <path d="M0 0h24v24H0z" fill="url(#g)"/>
+  <circle cx="12" cy="12" r="4" style="fill:#abc"/>
+</svg>

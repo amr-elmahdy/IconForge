@@ -1,0 +1,6 @@
+{"total":4,"icons":[
+ {"slug":"react","title":"React","aliases":["reactjs"],"categories":["Framework"],"hex":"61DAFB","url":"https://react.dev","guidelines":null,"links":null,"license":"CC0-1.0","variants":["default","mono","wordmarkLight"]},
+ {"slug":"github","title":"GitHub","aliases":[],"categories":["DevTool"],"hex":"181717","url":"https://github.com","guidelines":null,"links":null,"license":"CC0-1.0","variants":["default","mono"]},
+ {"slug":"foo","title":"Foo","aliases":["shared"],"categories":[],"hex":null,"url":null,"guidelines":null,"links":null,"license":null,"variants":["default","mono"]},
+ {"slug":"foo-mono","title":"Foo Mono","aliases":["shared"],"categories":[],"hex":null,"url":null,"guidelines":null,"links":null,"license":null,"variants":["default"]}
+]}

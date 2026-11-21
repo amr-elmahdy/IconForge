@@ -1,0 +1,22 @@
+# IconForge input: one icon name (theSVG slug or unique alias) per line.
+# Lines starting with # are comments; blank lines and extra spaces are ignored.
+# Names that do not exist in the source are reported with their line number.
+
+# Programming Languages
+javascript
+typescript
+python
+rust
+go
+
+# Frameworks
+react
+vue
+nextjs
+angular
+
+# Development Tools
+docker
+github
+git
+vscode
